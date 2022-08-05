@@ -10,4 +10,10 @@
 [1234,1567,-2,computer science] -> ["-2"]
 [Russia,Denmark,Kazan] -> [] */
 
-
+string[] CreateArray()
+{
+    Console.WriteLine("Введите элементы массива через запятую: ");
+    string[] array = Console.ReadLine()!.Split(',');
+    Console.WriteLine($"Изначальный массив: [{string.Join(", ", array)}]");
+    return array;
+}
