@@ -15,16 +15,16 @@ ArraySort(result);
 
 void ArraySort(string[] arr)
 {
-    int size = 3;
+    int size = 3; // условия для отбора элементов из маассива
     var value = string.Empty;
-    string[] newarr = new string[arr.Length];
+    string[] newarr = new string[arr.Length]; // создать новый массив для отобранных элементов
     for (int i = 0; i < arr.Length; i++)
     {
-        value = arr[i];
-        if (value.Length <= size)
+        value = arr[i]; 
+        if (value.Length <= size) // если элемент на позиции меньше условия для отбора
             newarr[i] = arr[i];
     }
-    newarr = newarr.Where(x => x != null).ToArray();
+    newarr = newarr.Where(x => x != null).ToArray(); // чтобы убрать пустые позиции массива 
     Console.WriteLine($"Отобранный массив: [{string.Join(", ", newarr)}]");
 }
 
